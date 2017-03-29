@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,22 +103,22 @@
                 <div class="pull-left">
                   <strong>Filter By Profile</strong>
                   <ul id="countyBoxes" class="list-inline">
-                    <li class="btn-group btn-group-xs" data-toggle="buttons">
-                      <label class="btn btn-default ">
+                    <li class="btn-group btn-group-xs active" data-toggle="buttons">
+                      <label id="cboxTest" class="btn btn-default active" name="countyRange">
                         <input type="checkbox" value="18-34" name="countyRange">
                         <i class="fa fa-check"></i>
                       </label>
                     </li>
                     <li>College Student</li>
                     <li class="btn-group  btn-group-xs" data-toggle="buttons">
-                      <label class="btn btn-default ">
+                      <label class="btn btn-default active" name="countyRange">
                         <input type="checkbox" value="35-54" name="countyRange">
                         <i class="fa fa-check"></i>
                       </label>
                     </li>
                     <li>Outdoorsman</li>
                     <li class="btn-group btn-group-xs" data-toggle="buttons">
-                      <label class="btn btn-default ">
+                      <label class="btn btn-default active" name="countyRange">
                         <input type="checkbox" value="55+" name="countyRange">
                         <i class="fa fa-check"></i>
                       </label>
@@ -143,7 +144,7 @@
               <div class="panel-group">
                 <div class="alert alert-dismissible" role="alert">
                   <div class="panel panel-info">
-                    <div class="panel-heading" >Panel title info<a class="btn-info pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
+                    <div class="panel-heading" >Panel title info<a href="#" class="btn-info pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
                     <div class="panel-body">
                       Message with <a class="alert-info" href="#" >actionable link.</a>
                     </div>
@@ -151,7 +152,7 @@
                 </div>
                 <div class="alert alert-dismissible" role="alert">
                   <div class="panel panel-danger">
-                    <div class="panel-heading">Panel title Danger<a class="btn-danger pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
+                    <div class="panel-heading">Panel title Danger<a href="#" class="btn-danger pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
                     <div class="panel-body">
                       Message with <a href="#" class="alert-danger">actionable link.</a>
                     </div>
@@ -159,7 +160,7 @@
                 </div>
                 <div class="alert alert-dismissible" role="alert">
                   <div class="panel panel-warning">
-                    <div class="panel-heading">Panel title Warning<a class="btn-warning pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
+                    <div class="panel-heading">Panel title Warning<a href="#" class="btn-warning pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
                     <div class="panel-body">
                       Message with <a href="#" class="alert-warning">actionable link.</a>
                     </div>
@@ -167,7 +168,7 @@
                 </div>
                 <div class="alert alert-dismissible" role="alert">
                   <div class="panel panel-success">
-                    <div class="panel-heading">Panel title Success<a class="btn-success pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
+                    <div class="panel-heading">Panel title Success<a href="#" class="btn-success pull-right fa fa-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"></span></a></div>
                     <div class="panel-body">
                       Your custom alert "Last Years Goal" has triggered. View the report at <a href="#" class="alert-success">this link.</a>
                     </div>
@@ -177,7 +178,6 @@
             </div>
           </div>
         </div>
-
 
         <!--Second Row -->
         <div class="flex-row row">
@@ -261,22 +261,22 @@
               <div class="panel-footer">
                 <ul class="list-inline text-center">
                   <li class="btn-group btn-group-xs" data-toggle="buttons">
-                    <label class="btn btn-success active" id="auth" onclick="drawDonut()">
-                      <input type="checkbox" autocomplete="off">
+                    <label class="btn btn-success active" id="authorizations" name="transactionType">
+                      <input type="checkbox" autocomplete="off" name="transactionType">
                       <i class="fa fa-check"></i>
                     </label>
                   </li>
                   <li>Authorizations</li>
                   <li class="btn-group btn-group-xs" data-toggle="buttons">
-                    <label class="btn btn-warning active" id="chargeback" onclick="drawDonut()">
-                      <input type="checkbox" autocomplete="off">
+                    <label class="btn btn-warning active" id="chargebacks" name="transactionType">
+                      <input type="checkbox" autocomplete="off" name="transactionType">
                       <i class="fa fa-check"></i>
                     </label>
                   </li>
                   <li>Chargebacks</li>
                   <li class="btn-group btn-group-xs" data-toggle="buttons">
-                    <label class="btn btn-danger active" id="decline" onclick="drawDonut()">
-                      <input type="checkbox" autocomplete="off">
+                    <label class="btn btn-danger active" id="declines" name="transactionType">
+                      <input type="checkbox" autocomplete="off" name="transactionType">
                       <i class="fa fa-check"></i>
                     </label>
                   </li>
@@ -285,11 +285,7 @@
               </div>
             </div>
           </div>
-          <!-- /#page-content-wrapper -->
-        </div>
-        <!-- /#wrapper -->
-        <div class="flex-row row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="col-lg-8 col-md-6 col-sm-12">
             <div class="panel">
               <div class="panel-heading">
                 <ul class="list-inline text-center">
@@ -340,14 +336,14 @@
               <div class="panel-footer">
                 <ul class="list-inline text-center">
                   <li class="btn-group btn-group-xs" data-toggle="buttons">
-                    <label class="btn btn-info active"  id="current" onclick="drawSmoothLine()">
+                    <label class="btn btn-info active"  id="current">
                       <input type="checkbox" autocomplete="off">
                       <i class="fa fa-check"></i>
                     </label>
                   </li>
                   <li>Current Year</li>
                   <li class="btn-group btn-group-xs" data-toggle="buttons">
-                    <label class="btn btn-primary active"  id="last" onclick="drawSmoothLine()">
+                    <label class="btn btn-primary active"  id="last">
                       <input type="checkbox" autocomplete="off">
                       <i class="fa fa-check"></i>
                     </label>
@@ -357,9 +353,13 @@
               </div>
             </div>
           </div>
-          <div class="flex-row row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="panel">
+        </div>
+
+        <!-- Add widget row -->
+        <div class="flex-row row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class=" panel-heading">
+              <div class="btn-group btn-block">
                 <div class="btn btn-link btn-lg btn-block">
                   <i class="fa fa-plus-circle"></i>&nbsp; Add Widget
                 </div>
@@ -376,10 +376,7 @@
     <!-- scripts-->
     <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>
-    <script src="charts/donut/donut.js"></script>
-    <script src="charts/smoothline/smoothline.js"> </script>
-    <script src="charts/tip.js"></script>
-    <script src="charts/toggle.js"></script>
+
     <!-- <script>
          System.import('startup');
          drawDonut();
